@@ -1,11 +1,10 @@
-README for Lexilla library.
+# Lexilla #
 
-The Lexilla library contains a set of lexers and folders that provides support for
-programming, mark-up, and data languages for the Scintilla source code editing
-component.
+The Lexilla library contains a set of lexers and folders that provide support for
+programming, syntax checking / highlighting usually used in combination with Scintilla for source code editors or IDE / ISE enironments.
 
-Lexilla is made available as both a shared library and static library.
-The shared library is called liblexilla.so / liblexilla.dylib / lexilla.dll on Linux / macOS /
+Lexilla is made available as both a shared library and a static library.
+The shared library wioolexilla.so` / `liblexilla.dylib` / `lexilla.dll` on Linux / macOS /
 Windows.
 The static library is called liblexilla.a when built with GCC or Clang and liblexilla.lib
 when built with MSVC.
