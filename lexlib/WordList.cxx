@@ -9,6 +9,7 @@
 #include <cassert>
 #include <cstring>
 
+#include <string>
 #include <algorithm>
 #include <iterator>
 #include <memory>
@@ -133,7 +134,7 @@ bool WordList::Set(const char *s) {
 	len = lenTemp;
 	std::fill(starts, std::end(starts), -1);
 	for (int l = static_cast<int>(len - 1); l >= 0; l--) {
-		unsigned char indexChar = words[l][0];
+		unsigned char const indexChar = words[l][0];
 		starts[indexChar] = l;
 	}
 	return true;
@@ -180,6 +181,12 @@ bool WordList::InList(const char *s) const noexcept {
 		}
 	}
 	return false;
+}
+
+/** convenience overload so can easily call with std::string.
+ */
+bool WordList::InList(const std::string &s) const noexcept {
+	return InList(s.c_str());
 }
 
 /** similar to InList, but word s can be a substring of keyword.
